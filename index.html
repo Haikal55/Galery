@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pinterest-like Layout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+<style>
+  body {
+    font: 1.1em Arial, Helvetica, sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  figure {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+
+  figure > img {
+    grid-row: 1 / -1;
+    grid-column: 1;
+  }
+
+  figure a {
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(1px 0 0 black) 
+            drop-shadow(0 1px 0 black)
+            drop-shadow(-1px 0 0 black) 
+            drop-shadow(0 -1px 0 black);
+  }
+
+  figcaption {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: rgba(255,255,255,.5);
+    padding: .2em .5em;
+    justify-self: start;
+  }
+
+  .container {;
+    column-count: 4;
+    column-gap: 10px;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-bottom: 10px;
+    background-image: url("Graffiti Woman street art fashion 03.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  h1 {
+    font-family: "Nosifer", sans-serif;
+    font-size: 24px;
+    padding-left: 10px;
+    filter: drop-shadow(1px 0 0 black) 
+            drop-shadow(0 1px 0 black)
+            drop-shadow(-1px 0 0 black) 
+            drop-shadow(0 -1px 0 black);
+  }
+
+  h3 {
+    font-family: "Nosifer", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+    color: #6c757d;
+  }
+
+  footer {
+      background-color: #333; /* Warna latar belakang footer */
+      color: #fff; /* Warna teks footer */
+      padding: 20px; /* Ruang pola di dalam footer */
+      text-align: center; /* Pusatkan teks dalam footer */
+      margin-top: 10px;
+  }
+
+  /* Style untuk teks hak cipta */
+  .footer-content p {
+      margin: 0; /* Hapus margin atas dan bawah pada teks hak cipta */
+  }
+
+  /* Style untuk tautan footer */
+  .footer-content .footer-links {
+      list-style: none; /* Hapus gaya daftar untuk tautan footer */
+      padding: 0; /* Hapus padding pada tautan footer */
+  }
+
+  .footer-content .footer-links li {
+      display: inline; /* Tampilkan tautan dalam satu baris */
+      margin-right: 10px; /* Tambahkan margin antara tautan */
+  }
+
+  .footer-content .footer-links li:last-child {
+      margin-right: 0; /* Hapus margin kanan dari tautan terakhir */
+  }
+
+  .footer-content .footer-links li a {
+      color: #fff; /* Warna teks tautan footer */
+      text-decoration: none; /* Hapus garis bawah tautan */
+  }
+
+  .footer-content .footer-links li a:hover {
+      text-decoration: underline; /* Tambahkan garis bawah saat tautan disorot */
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      column-count: 2;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .container {
+      column-count: 1;
+    }
+  }
+</style>
+</head>
+<body>
+    
+<header>
+  <h1>Hideko Galery</h1>
+</header>
+
+<h3>Welcome to Hideko Galery, where creativity knows no bounds!</h3>
+    
+<div class="container">
+  
+  <figure>
+    <img src="Scribble sketch.jpg" alt="Scribble sketch" />
+    <figcaption><a href="Scribble sketch.jpg" download>Scribble Image</a></figcaption>
+  </figure>
+
+    <figure>
+    <img src="isometic haikal.jpg" alt="Scribble sketch" />
+    <figcaption><a href="isometic haikal.jpg" download>Isometric</a></figcaption>
+  </figure>
+
+  <figure>
+    <img src="Poster.jpg" alt="Scribble sketch" />
+    <figcaption><a href="Poster.jpg" download>Poster</a></figcaption>
+  </figure>
+
+  <figure>
+    <img src="typography haikal.jpg" alt="Scribble sketch" />
+    <figcaption><a href="typography haikal.jpg" download>Typography</a></figcaption>
+  </figure>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>Hak Cipta &copy; 2024. Semua Hak Dilindungi.</p>
+        <ul class="footer-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
